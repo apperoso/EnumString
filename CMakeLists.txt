@@ -9,7 +9,7 @@ set(CMAKE_CXX_EXTENSIONS NO)
 
 # Compiler-specific options
 if (MSVC)
-	# Set NOMINMAX as Microsoft's min() & max() macros break stuff (esp. GSL!)
+	# Set NOMINMAX to ensure Microsoft's min() & max() macros don't clash
 	add_compile_definitions(NOMINMAX)
 
 	# Turn on all warnings, warnings as errors but exclude external code
@@ -26,13 +26,10 @@ endif()
 add_executable(
 	EnumString
 	"include/EnumString/enum_string.h"
-	
-
 	"src/EnumString/main.cpp"
- )
+)
 
 target_include_directories(EnumString PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
-#target_link_libraries(genni_app PUBLIC genni_lib)
 
 # Set the IDE structure to match the folder structure
 get_target_property(sources EnumString SOURCES)
