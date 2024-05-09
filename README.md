@@ -1,7 +1,7 @@
 # EnumString
 ## Compile-time generation of enum strings using C++23
 
-Inspired by the magic_enum [https://github.com/Neargye/magic_enum], this code was generated as a learning exercise whilst working on another project, and has been shared in the hope that others may find some of the ideas useful.
+Inspired by the magic_enum [https://github.com/Neargye/magic_enum], this code was created as a learning exercise whilst working on another project, and has been shared in the hope that others may find some of the ideas useful.
 
 This version will convert a scoped enum into an array of strings representing each entry.
 
