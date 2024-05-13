@@ -15,7 +15,7 @@ Create a scoped enum that satisfies the following conditions:
 
 The example included in the main.cpp file is:
 
-```
+```cpp
 enum class Fruit {
 	apple,
 	banana,
@@ -39,13 +39,15 @@ enum class Fruit {
 
 Generate an enum string by calling makeEnumString: 
 
-`auto fruitNames = EnumString::makeEnumString<Fruit>();`
+```cpp
+auto fruitNames = EnumString::makeEnumString<Fruit>();
+```
 
 fruitNames will be an array of strings containing the names of the members of Fruit (excluding enumSize). Its type will be `std::array<std::string_view, 15>`
 
 The code in main() demonstrates creating the enum string and printing the values:
 
-```
+```cpp
 auto fruitNames = EnumString::makeEnumString<Fruit>();
 
 std::println("List of fruits:\n");
@@ -58,7 +60,7 @@ for (auto const [index, name] : std::views::enumerate(fruitNames))
 
 The output from this code is:
 
-```
+```cpp
 List of fruits:
 
  0: apple
